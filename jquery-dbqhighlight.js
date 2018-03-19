@@ -1,10 +1,10 @@
 ﻿(function ($)
 {
-    $.fn.oddMenOut = function (options)
+    $.fn.dbqhighlight = function (options)
     {
 		var defaults = {
 			highlightColor: '#FF0',
-			highlightColumnClass: 'oddMenOut-highlight',
+			highlightColumnClass: 'dbq-highlight',
         };
 
         options = $.extend(defaults, options);
@@ -13,11 +13,9 @@
         {
             var $this = $(this);
 
-			// get a list of each unique value as well as the number of times it's found.
-			
 			$this.find("thead tr th." + options.highlightColumnClass).each(function() {
+				// get a list of each unique value as well as the number of times it's found.
 				// get values
-				//var cell_index = $this.find("thead tr").find("th.oddMenOut-highlight").index();
 				var cell_index = $(this).index();
 				console.log("cell_index:" + cell_index);
 				var row_tds = $("tr td:nth-child(" + (cell_index + 1) + ")")
@@ -58,7 +56,10 @@
 				var highest_element = unique[elementPos];
 				
 				// highlight the rows that are not the value of the highest number.
-				$this.find("tr td:nth-child(" + (cell_index + 1) + "):not(:contains('" + highest_element + "'))").css('background-color', options.highlightColor);
+				$this.find("tr td:nth-child(" + (cell_index + 1) 
+							+ "):not(:contains('" 
+							+ highest_element 
+							+ "'))").css('background-color', options.highlightColor);
 				
 			});
         });

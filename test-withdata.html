@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery oddMenOut Plugin Demo</title>
+    <title>jQuery dbQHighlight Plugin Demo</title>
      
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-	<script src="jquery-oddMenOut.js"></script>
+	<script src="jquery-dbqhighlight.js"></script>
 </head>
 <body>
  
@@ -23,8 +23,8 @@
 					<th>Rank</th>
 					<th>Contact</th>
 					<th>Street</th>
-					<th class="oddMenOut-highlight">City </th>
-					<th class="oddMenOut-highlight">Code</th>
+					<th class="hl-column">City </th>
+					<th class="hl-column">Code</th>
 					<th>Card</th>
 				</tr>
 			</thead>
@@ -1236,7 +1236,7 @@
 		<script>
 		
 			$(document).ready(function () {
-				$(".oddMenOut").oddMenOut({
+				$(".oddMenOut").dbqhighlight({
 					highlightColumnClass: 'hl-column'
 				});
 			});
